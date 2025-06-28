@@ -10,11 +10,11 @@ module.exports = (bot) => {
       return ctx.reply('📭 No message data available yet.');
     }
 
-    let reply = '🏆 *Top Active Users*\n\n';
+    let reply = '🏆 <b>Top Active Users</b>\n\n';
     topUsers.forEach((user, index) => {
-      reply += `${index + 1}. ${user.username || 'Anonymous'} — ${user.messageCount} msgs\n`;
+      reply += `${index + 1}. <i>${user.username || 'Anonymous'}</i> — ${user.messageCount} msgs\n`;
     });
 
-    ctx.replyWithMarkdown(reply);
+    ctx.replyWithHTML(reply);
   });
 };
