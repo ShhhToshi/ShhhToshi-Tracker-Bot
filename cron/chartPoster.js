@@ -66,7 +66,7 @@ module.exports = () => {
         `🔹 1 SHHHT = ${data.pn_ton} TON\n` +
         `🔹 1 SHHHT = $${data.pd_usdt} USDT\n` + 
         `📈 *Market Cap Estimate*: $${data.fdv}\n` +
-        `🔥 *Total Burned (${data.burnSymbol}):* ${data.burn} SHHHT\n` +
+        // `🔥 *Total Burned (${data.burnSymbol}):* ${data.burn} SHHHT\n` +
         `[📉 View Chart](${process.env.CHART_URL})\n\n` +
         `#ShhhToshi #SHHHT #Crypto #TON`;
 

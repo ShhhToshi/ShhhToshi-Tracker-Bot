@@ -10,6 +10,7 @@ const eventPoster = require('./cron/eventPoster');
 const eventModeCommand = require('./commands/eventmode');
 const excludedUsernames = require('./config/excludedUsernames');
 const autoDeleteMiddleware = require('./middlewares/autoDeleteWrapper');
+const chartPoster = require('./cron/chartPoster');
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
@@ -23,6 +24,7 @@ top10TodayCommand(bot);
 resetCommands(bot);
 eventModeCommand(bot);
 eventPoster();
+chartPoster();
 autoDeleteMiddleware(bot, 60);
 
 
