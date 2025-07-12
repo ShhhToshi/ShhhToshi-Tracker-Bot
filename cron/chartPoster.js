@@ -56,7 +56,7 @@ async function getTokenData() {
 }
 
 module.exports = () => {
-  cron.schedule('*/30 * * * *', async () => {
+  cron.schedule('*/180 * * * *', async () => {
     try {
       const chartPath = await getChartImage(process.env.CHART_URL);
       const data = await getTokenData();
