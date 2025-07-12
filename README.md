@@ -12,7 +12,7 @@ A powerful and lightweight Telegram bot built with **Node.js** and **Telegraf.js
   - `/myrank` – Displays your personal rank and count  
 
 - 🖼️ **Auto Chart Poster**  
-  - Posts chart images (e.g., token charts) every 30 minutes
+  - Posts chart images (e.g., token charts) every 30 minutes to the group
 
 - 🛠️ **Admin Commands**  
   - `/resetall` – Resets all-time message count  
@@ -43,12 +43,19 @@ A powerful and lightweight Telegram bot built with **Node.js** and **Telegraf.js
    npm install
    ```
 
-3. **Create Your `.env` File**
-   - Use the `.env.example` as a reference:
-     ```env
-     BOT_TOKEN=your_telegram_bot_token_here
-     MONGO_URI=your_mongodb_connection_string_here
-     ```
+3. **Create `.env` File**
+   Use the provided `.env.example` and fill in your details:
+
+   ```env
+   BOT_TOKEN=your_telegram_bot_token_here
+   MONGO_URI=your_mongodb_connection_string_here
+   CHAT_ID=your_group_chat_id_here
+   CHART_URL=chart_image_url
+   PAIR_ID_TON=ton_pair_id
+   PAIR_ID_USDT=usdt_pair_id
+   BURN_WALLET_ADDRESS=your_wallet_address_here
+   ADMIN_ID=comma_separated_admin_user_ids
+   ```
 
 4. **Start the Bot**
    ```bash
@@ -82,8 +89,4 @@ docker run -d --env-file .env shhhtoshi-tracker-bot
 This project is licensed under the [MIT License](LICENSE).
 
 ---
-
-## 💬 Contact
-
-Need help or want to contribute?  
 
